@@ -4,21 +4,21 @@ import Room from "./room";
 export default function Home() {
   return (
     <>
-      <main className="grid lg:grid-cols-2">
-        <section className="bg-ocean min-h-screen flex justify-center items-center">
-          <div className="text-2xl antialiased font-mono text-michael p-32">
-            <p>
-              👋 Hey, I'm <span className="text-michael-white">Michael.</span>
+      <main className="grid">
+        <section className="bg-ocean min-h-screen flex items-center">
+          <div className="text-xl antialiased font-mono text-michael pl-20">
+            <p>👋 Hi, my name is </p>
+            <p className="text-michael-white text text-5xl mt-4 text-responsive-heading">
+              Michael Ge.
             </p>
-            <p>
-              I'm a{" "}
-              <span className="text-michael-white">
-                {" "}
-                full stack software developer{" "}
-              </span>
-              that works on HCM and WFM solutions
+            <p className="text-michael-green text text-5xl mt-2 text-responsive-heading">
+              I'm a software developer
             </p>
-            <p className="text-sm">
+            <p className="max-w-[500px] mt-4">
+              I implement scheduling solutions for HCM and WFM projects in
+              healthcare and retail industries
+            </p>
+            <p className="text-sm mt-2">
               Currently working at{" "}
               <a
                 href="https://www.ukg.com/"

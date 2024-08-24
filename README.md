@@ -2,6 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ![alt text](image.png)
 ![alt text](image-1.png)
+![alt text](image-2.png)
 7C84FF
 #615f8e
 
