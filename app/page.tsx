@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Room from "./room";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -43,6 +44,11 @@ export default function Home() {
         <section className="bg-ocean-lite min-h-screen flex items-center justify-center">
           <div>
             <p>Get in touch</p>
+            <Link href="/Software-Resume-2023.pdf" locale={false}>
+              <button className="border-2 border-michael-green hover:bg-michael-green text-michael-white font-bold py-2 px-4 rounded">
+                Resume
+              </button>
+            </Link>
           </div>
         </section>
       </main>

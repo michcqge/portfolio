@@ -19,7 +19,8 @@ const config: Config = {
         'michael': '#908b71',
         'michael-white': '#fff4d6',
         'michael-red-500':'#a14c5e',
-        'michael-green':'#4CA199'
+        'michael-green':'#4CA199',
+        'michael-green-500':'#26514d'
       },
       fontSize: {
         'responsive-heading':'clamp(20px, 8vw, 60px)'
