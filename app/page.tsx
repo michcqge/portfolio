@@ -18,7 +18,7 @@ export default function Home() {
                 Michael Ge.
               </p>
               <p className="text-michael-green text text-5xl mt-2 text-responsive-heading">
-                I\'m a software developer
+                I'm a software developer
               </p>
               <p className="max-w-[500px] mt-4">
                 I implement scheduling solutions for HCM and WFM projects in
@@ -35,8 +35,8 @@ export default function Home() {
               </p>
             </div>
           </section>
-          <section id="about" className="bg-ocean px-60 py-10 m-auto">
-            <h1 className="text-michael-white text text-4xl mt-2 text-responsive-heading">
+          <section id="about" className="bg-ocean px-40 m-auto">
+            <h1 className="text-michael-white text text-2xl mt-2 text-responsive-heading">
               📝About me
             </h1>
             <section
@@ -62,7 +62,7 @@ export default function Home() {
               </div>
               <Image
                 src="MichaelAvatar.svg"
-                alt="That\'s me!"
+                alt="That's me!"
                 width={300}
                 height={300}
                 className="min-w-40 max-w-40 relative top-[-70px]"
@@ -76,17 +76,20 @@ export default function Home() {
             id="experience"
             className="bg-ocean min-h-screen flex items-center justify-center"
           >
-            <h1>Experience</h1>
-
             <div>
-              <p>Get in touch</p>
+              <h1>Experience</h1>
+              <p className="text-5xl">Work in progress 🚧</p>
             </div>
           </section>
         </main>
         <main>
-          <section id="projects" className="bg-ocean min-h-screen">
+          <section
+            id="projects"
+            className="bg-ocean min-h-screen flex items-center justify-center"
+          >
             <div>
               <h1>Projects</h1>
+              <p className="text-5xl">Work in progress 🚧</p>
             </div>
           </section>
         </main>
