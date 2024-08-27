@@ -18,7 +18,7 @@ export default function Home() {
                 Michael Ge.
               </p>
               <p className="text-michael-green text text-5xl mt-2 text-responsive-heading">
-                I'm a software developer
+                I\'m a software developer
               </p>
               <p className="max-w-[500px] mt-4">
                 I implement scheduling solutions for HCM and WFM projects in
@@ -62,7 +62,7 @@ export default function Home() {
               </div>
               <Image
                 src="MichaelAvatar.svg"
-                alt="That's me!"
+                alt="That\'s me!"
                 width={300}
                 height={300}
                 className="min-w-40 max-w-40 relative top-[-70px]"

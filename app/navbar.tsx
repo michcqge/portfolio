@@ -3,8 +3,12 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <nav className="bg-ocean text-michael-white text-sm font-bold py-2 px-20 sticky top-0 flex justify-between items-center">
-      <div>🥯</div>
+    <div className="bg-ocean text-michael-white text-sm font-bold py-2 px-20 sticky top-0 flex justify-between items-center">
+      <div>
+        <Link href={"/"} className="text-xl">
+          🥯
+        </Link>
+      </div>
       <div>
         <ul className="container flex justify-between items-center space-x-10">
           <li>
@@ -40,6 +44,6 @@ export default function Navbar() {
           </li>
         </ul>
       </div>
-    </nav>
+    </div>
   );
 }
