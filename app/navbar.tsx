@@ -3,7 +3,7 @@ import Link from "next/link";
 
 export default function Navbar() {
   return (
-    <div className="bg-ocean text-michael-white text-sm font-bold py-2 px-20 sticky top-0 flex justify-between items-center">
+    <div className="bg-ocean antialiased font-mono text-michael-white text-sm font-bold py-2 px-20 sticky top-0 flex justify-between items-center">
       <div>
         <Link href={"/"} className="text-xl">
           🥯
@@ -36,7 +36,7 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
-            <Link href="/Software-Resume-2023.pdf" locale={false}>
+            <Link href="/Software-Resume.pdf" locale={false}>
               <button className="border-2 border-michael-green hover:bg-michael-green duration-300 text-michael-white font-bold py-2 px-4 rounded">
                 Resume
               </button>

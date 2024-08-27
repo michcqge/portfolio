@@ -35,8 +35,11 @@ export default function Home() {
               </p>
             </div>
           </section>
-          <section id="about" className="bg-ocean px-40 m-auto">
-            <h1 className="text-michael-white text text-2xl mt-2 text-responsive-heading">
+          <section
+            id="about"
+            className="bg-ocean px-40 m-auto antialiased font-mono"
+          >
+            <h1 className="text-michael-white text text-2xl mt-2 text-responsive-heading antialiased font-mono">
               📝About me
             </h1>
             <section
@@ -74,7 +77,7 @@ export default function Home() {
         <main>
           <section
             id="experience"
-            className="bg-ocean min-h-screen flex items-center justify-center"
+            className="bg-ocean min-h-screen flex items-center justify-center antialiased font-mono"
           >
             <div>
               <h1>Experience</h1>
@@ -85,7 +88,7 @@ export default function Home() {
         <main>
           <section
             id="projects"
-            className="bg-ocean min-h-screen flex items-center justify-center"
+            className="bg-ocean min-h-screen flex items-center justify-center antialiased font-mono"
           >
             <div>
               <h1>Projects</h1>
