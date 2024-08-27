@@ -9,10 +9,10 @@ export default function Home() {
       <header>
         <Navbar />
       </header>
-      <div className="px-20">
+      <div className="m-auto">
         <main className="grid">
-          <section className="bg-ocean min-h-screen">
-            <div className="text-xl antialiased font-mono text-michael pl-20 pt-20 ease-in duration-700 transition-opacity opacity-30 hover:opacity-100">
+          <section className="bg-ocean min-h-screen ease-in duration-700 transition-opacity opacity-30 hover:opacity-100">
+            <div className="text-xl antialiased font-mono text-michael pl-20 pt-20">
               <p>👋 Hi, my name is </p>
               <p className="text-michael-white text text-5xl mt-4 text-responsive-heading">
                 Michael Ge.
