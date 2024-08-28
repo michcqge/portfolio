@@ -5,12 +5,12 @@ export default function Navbar() {
   return (
     <div className="bg-ocean antialiased font-mono text-michael-white text-sm font-bold py-2 px-20 sticky top-0 flex justify-between items-center">
       <div>
-        <Link href={"/"} className="text-xl">
-          🥯
+        <Link href={"/"} className="text-xl min-h-40 py-8">
+          <button className="py-2">🥯</button>
         </Link>
       </div>
       <div>
-        <ul className="container flex justify-between items-center space-x-10">
+        <ul className="container md:flex justify-between items-center space-x-10 hidden">
           <li>
             <Link
               href="#about"
