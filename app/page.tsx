@@ -1,9 +1,39 @@
+"use client";
+
 import Image from "next/image";
 import Room from "./room";
 import Link from "next/link";
 import Navbar from "./navbar";
+import { useEffect } from "react";
 
 export default function Home() {
+  useEffect(() => {
+    const sections = document.querySelectorAll(".fade-in");
+
+    const handleScroll = () => {
+      sections.forEach((section) => {
+        const sectionTop = section.getBoundingClientRect().top;
+        const sectionBottom = section.getBoundingClientRect().bottom;
+
+        if (sectionTop < window.innerHeight - 300 && sectionTop) {
+          section.classList.add("active");
+          section.classList.remove("inactive");
+        } else {
+          section.classList.remove("active");
+          section.classList.add("inactive");
+        }
+      });
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    handleScroll();
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <div className="bg-ocean">
       <header>
@@ -11,7 +41,7 @@ export default function Home() {
       </header>
       <div className="m-auto">
         <main className="grid sm:px-4 md:px-10 lg:px-20">
-          <section className="bg-ocean min-h-screen ease-in duration-700 transition-opacity opacity-30 hover:opacity-100  px-4 flex justify-start sm:pl-10 lg:pl-40">
+          <section className="bg-ocean min-h-screen ease-in duration-700 transition-opacity sm:opacity-30 hover:opacity-100  px-4 flex justify-start sm:pl-10 lg:pl-40">
             <div className="text-xl antialiased font-mono text-michael pt-20">
               <p>👋 Hi, my name is </p>
               <p className="text-michael-white text text-5xl mt-4 text-responsive-heading">
