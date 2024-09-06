@@ -1,8 +1,9 @@
 import React from "react";
-import Image from "next/image";
+import Link from "next/link";
 
 interface ExperienceComponentProps {
   company: string;
+  companyUrl: string;
   role: string;
   tenure: string;
   accomplishments: string[];
@@ -11,17 +12,22 @@ interface ExperienceComponentProps {
 
 export default function ExperienceComponent({
   company,
+  companyUrl,
   role,
   tenure,
   accomplishments,
   skills,
 }: ExperienceComponentProps) {
   return (
-    <div className="bg-ocean-dark rounded-lg overflow-hidden transition-all duration-300 border-2 border-michael-green flex flex-col w-full max-w-3xl mx-auto mb-8">
+    <div className="bg-ocean-dark rounded-lg overflow-hidden transition-all duration-300 border-2 border-michael-green flex flex-col w-full max-w-3xl mx-auto mb-8 group">
       <div className="p-8 flex flex-col">
         <div className="flex items-center mb-6">
           <div>
-            <h3 className="text-2xl font-bold text-michael-white">{company}</h3>
+            <Link href={companyUrl}>
+              <h3 className="text-2xl font-bold text-michael-white group-hover:text-michael-red-500 duration-300">
+                {company}
+              </h3>
+            </Link>
             <p className="text-xl text-michael-green font-semibold mt-1">
               {role}
             </p>

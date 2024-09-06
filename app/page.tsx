@@ -136,13 +136,14 @@ export default function Home() {
             className="bg-ocean min-h-screen py-20 px-4 sm:px-6 lg:px-8 antialiased font-mono"
           >
             <h2 className="text-3xl font-bold text-michael-white mb-10 text-center">
-              Experience
+              My Experience
             </h2>
             <div className="grid grid-cols-1 gap-8">
               <ExperienceComponent
                 company="UKG"
-                role="Full Stack Developer"
-                tenure="2022 - Present"
+                companyUrl="https://www.ukg.com/"
+                role="Full Stack Software Developer"
+                tenure="June 2022 - Present"
                 accomplishments={[
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. Sed ut purus eget sapien. Sed ut purus eget sapien.",
                   "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. Sed ut purus eget sapien. Sed ut purus eget sapien.",

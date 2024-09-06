@@ -19,7 +19,7 @@ export default function ProjectComponent({
   liveLink,
 }: ProjectComponentProps) {
   return (
-    <div className="bg-ocean-dark rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 border-2 border-michael-green flex flex-col h-full">
+    <div className="bg-ocean-dark rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 border-2 border-michael-green flex flex-col h-full group">
       <Image
         src={imageUrl}
         alt={title}
@@ -28,7 +28,7 @@ export default function ProjectComponent({
         className="w-full h-48 object-cover"
       />
       <div className="p-6 flex flex-col flex-grow">
-        <h3 className="text-xl font-semibold text-michael-white mb-2">
+        <h3 className="text-xl font-semibold text-michael mb-2 group-hover:text-michael-green duration-300">
           {title}
         </h3>
         <p className="text-gray-300 mb-4">{description}</p>
