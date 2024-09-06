@@ -4,9 +4,16 @@ import Image from "next/image";
 import Room from "./room";
 import Link from "next/link";
 import Navbar from "./navbar";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
+import SplashScreen from "./components/SplashScreen";
+import useTypewriter from "./hooks/useTypewriter"; // Add this import
 
 export default function Home() {
+  const { text: typewriterText, cursor: showCursor } = useTypewriter(
+    "I'm a software developer",
+    100
+  );
+
   useEffect(() => {
     const sections = document.querySelectorAll(".fade-in");
 
@@ -35,20 +42,28 @@ export default function Home() {
   }, []);
 
   return (
-    <div className="bg-ocean">
+    <div className="bg-ocean transition-opacity duration-1000">
+      {/* {showSplash && <SplashScreen />} */}
       <header>
         <Navbar />
       </header>
       <div className="m-auto">
         <main className="grid sm:px-4 md:px-10 lg:px-20">
-          <section className="bg-ocean min-h-screen ease-in duration-700 transition-opacity sm:opacity-30 hover:opacity-100  px-4 flex justify-start sm:pl-10 lg:pl-40">
+          <section className="bg-ocean min-h-screen px-4 flex justify-start sm:pl-10 lg:pl-40">
             <div className="text-xl antialiased font-mono text-michael pt-20">
               <p>👋 Hi, my name is </p>
               <p className="text-michael-white text text-5xl mt-4 text-responsive-heading">
                 Michael Ge.
               </p>
               <p className="text-michael-green text text-5xl mt-2 text-responsive-heading">
-                I'm a software developer
+                {typewriterText}
+                <span
+                  className={`${
+                    showCursor ? "opacity-100" : "opacity-0"
+                  } transition-opacity duration-100`}
+                >
+                  |
+                </span>
               </p>
               <p className="max-w-[500px] mt-4">
                 I implement scheduling solutions for HCM and WFM projects in
