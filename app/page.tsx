@@ -7,19 +7,20 @@ import Navbar from "./navbar";
 import { useEffect, useState } from "react";
 import SplashScreen from "./components/SplashScreen";
 import useTypewriter from "./hooks/useTypewriter";
+import ProjectComponent from "./components/ProjectComponent";
 
 export default function Home() {
   const [showContent, setShowContent] = useState(false);
   const { text: typewriterText, cursor: showCursor } = useTypewriter(
     "I'm a software developer",
-    150,
+    100,
     showContent // Pass showContent to start typing when content is displayed
   );
 
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowContent(true);
-    }, 100);
+    }, 500);
 
     const sections = document.querySelectorAll(".fade-in");
 
@@ -124,7 +125,7 @@ export default function Home() {
                 alt="That's me!"
                 width={300}
                 height={300}
-                className="min-w-40 max-w-40 mx-auto xl:relative xl:top-[-70px]"
+                className="min-w-40 max-w-40 mx-auto xl:relative xl:top-[-70px] hover:scale-125 duration-300"
               />
             </section>
             {/* <Room /> */}
@@ -140,11 +141,34 @@ export default function Home() {
           </section>
           <section
             id="projects"
-            className="bg-ocean min-h-screen flex items-center justify-center antialiased font-mono"
+            className="bg-ocean min-h-screen py-20 px-4 sm:px-6 lg:px-8 antialiased font-mono"
           >
-            <div>
-              <h1>Projects</h1>
-              <p className="text-xl">Work in progress 🚧</p>
+            <h2 className="text-3xl font-bold text-michael-white mb-10 text-center">
+              Projects
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <ProjectComponent
+                title="Chinese Language Flashcards"
+                description="A simple flashcard app to help practice Chinese characters for the HSK exams."
+                imageUrl="https://images.unsplash.com/photo-1631067557824-4a56467086a0?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                technologies={["React", "Next.js", "Tailwind"]}
+                githubLink="https://github.com/michcqge/HSK-Flashcards"
+                liveLink="https://michcqge.github.io/HSK-Flashcards/"
+              />
+              <ProjectComponent
+                title="Canada Olympics Database"
+                description="Relational database for Canadian Athletes who participated in the Olympics."
+                imageUrl="https://images.unsplash.com/photo-1686859155594-b7283e5206d6?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                technologies={["HTML", "PHP", "SQL"]}
+                githubLink="https://github.com/michcqge/Team-Canada-Database"
+              />
+              <ProjectComponent
+                title="NFT Art Gallery (24 hr Hackathon)"
+                description="Gallery to showcase NFT art collection, using Covalent Blockchain API."
+                imageUrl="https://images.unsplash.com/photo-1645731504331-72636399448e?q=80&w=2274&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                technologies={["React", "Covalent API"]}
+                githubLink="https://github.com/nkoda/Museums"
+              />
             </div>
           </section>
         </main>
