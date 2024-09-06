@@ -8,6 +8,7 @@ import { useEffect, useState } from "react";
 import SplashScreen from "./components/SplashScreen";
 import useTypewriter from "./hooks/useTypewriter";
 import ProjectComponent from "./components/ProjectComponent";
+import ExperienceComponent from "./components/ExperienceComponent";
 
 export default function Home() {
   const [showContent, setShowContent] = useState(false);
@@ -132,11 +133,32 @@ export default function Home() {
           </section>
           <section
             id="experience"
-            className="bg-ocean min-h-screen flex items-center justify-center antialiased font-mono"
+            className="bg-ocean min-h-screen py-20 px-4 sm:px-6 lg:px-8 antialiased font-mono"
           >
-            <div>
-              <h1>Experience</h1>
-              <p className="text-xl">Work in progress 🚧</p>
+            <h2 className="text-3xl font-bold text-michael-white mb-10 text-center">
+              Experience
+            </h2>
+            <div className="grid grid-cols-1 gap-8">
+              <ExperienceComponent
+                company="UKG"
+                role="Full Stack Developer"
+                tenure="2022 - Present"
+                accomplishments={[
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. Sed ut purus eget sapien. Sed ut purus eget sapien.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. Sed ut purus eget sapien. Sed ut purus eget sapien.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. Sed ut purus eget sapien. Sed ut purus eget sapien.",
+                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. Sed ut purus eget sapien. Sed ut purus eget sapien.",
+                ]}
+                skills={[
+                  "Java",
+                  "JavaScript",
+                  "PostgreSQL",
+                  "Git",
+                  "Docker",
+                  "Kubernetes",
+                  "Splunk",
+                ]}
+              />
             </div>
           </section>
           <section
@@ -151,7 +173,7 @@ export default function Home() {
                 title="Chinese Language Flashcards"
                 description="A simple flashcard app to help practice Chinese characters for the HSK exams."
                 imageUrl="https://images.unsplash.com/photo-1631067557824-4a56467086a0?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                technologies={["React", "Next.js", "Tailwind"]}
+                skills={["React", "Next.js", "Tailwind"]}
                 githubLink="https://github.com/michcqge/HSK-Flashcards"
                 liveLink="https://michcqge.github.io/HSK-Flashcards/"
               />
@@ -159,14 +181,14 @@ export default function Home() {
                 title="Canada Olympics Database"
                 description="Relational database for Canadian Athletes who participated in the Olympics."
                 imageUrl="https://images.unsplash.com/photo-1686859155594-b7283e5206d6?q=80&w=2340&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                technologies={["HTML", "PHP", "SQL"]}
+                skills={["HTML", "PHP", "SQL"]}
                 githubLink="https://github.com/michcqge/Team-Canada-Database"
               />
               <ProjectComponent
                 title="NFT Art Gallery (24 hr Hackathon)"
                 description="Gallery to showcase NFT art collection, using Covalent Blockchain API."
                 imageUrl="https://images.unsplash.com/photo-1645731504331-72636399448e?q=80&w=2274&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                technologies={["React", "Covalent API"]}
+                skills={["React", "Covalent API"]}
                 githubLink="https://github.com/nkoda/Museums"
               />
             </div>

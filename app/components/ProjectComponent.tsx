@@ -5,7 +5,7 @@ interface ProjectComponentProps {
   title: string;
   description: string;
   imageUrl: string;
-  technologies: string[];
+  skills: string[];
   githubLink?: string;
   liveLink?: string;
 }
@@ -14,7 +14,7 @@ export default function ProjectComponent({
   title,
   description,
   imageUrl,
-  technologies,
+  skills,
   githubLink,
   liveLink,
 }: ProjectComponentProps) {
@@ -34,10 +34,10 @@ export default function ProjectComponent({
         <p className="text-gray-300 mb-4">{description}</p>
         <div className="mt-auto">
           <div className="flex flex-wrap gap-2 mb-4">
-            {technologies.map((tech, index) => (
+            {skills.map((tech, index) => (
               <span
                 key={index}
-                className="bg-ocean-light text-michael-white px-2 py-1 rounded-full text-sm"
+                className="bg-michael-green bg-opacity-50 text-michael-white px-2 py-1 rounded-lg text-sm"
               >
                 {tech}
               </span>
