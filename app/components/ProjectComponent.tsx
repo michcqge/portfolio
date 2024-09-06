@@ -10,14 +10,14 @@ interface ProjectComponentProps {
   liveLink?: string;
 }
 
-const ProjectComponent: React.FC<ProjectComponentProps> = ({
+export default function ProjectComponent({
   title,
   description,
   imageUrl,
   technologies,
   githubLink,
   liveLink,
-}) => {
+}: ProjectComponentProps) {
   return (
     <div className="bg-ocean-dark rounded-lg shadow-lg overflow-hidden transition-transform duration-300 hover:scale-105 border-2 border-michael-green flex flex-col h-full">
       <Image
@@ -69,6 +69,4 @@ const ProjectComponent: React.FC<ProjectComponentProps> = ({
       </div>
     </div>
   );
-};
-
-export default ProjectComponent;
+}
