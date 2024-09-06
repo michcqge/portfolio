@@ -6,15 +6,21 @@ import Link from "next/link";
 import Navbar from "./navbar";
 import { useEffect, useState } from "react";
 import SplashScreen from "./components/SplashScreen";
-import useTypewriter from "./hooks/useTypewriter"; // Add this import
+import useTypewriter from "./hooks/useTypewriter";
 
 export default function Home() {
+  const [showContent, setShowContent] = useState(false);
   const { text: typewriterText, cursor: showCursor } = useTypewriter(
     "I'm a software developer",
-    100
+    150,
+    showContent // Pass showContent to start typing when content is displayed
   );
 
   useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowContent(true);
+    }, 100);
+
     const sections = document.querySelectorAll(".fade-in");
 
     const handleScroll = () => {
@@ -37,12 +43,17 @@ export default function Home() {
     handleScroll();
 
     return () => {
+      clearTimeout(timer);
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
   return (
-    <div className="bg-ocean transition-opacity duration-1000">
+    <div
+      className={`bg-ocean transition-opacity duration-1000 ${
+        showContent ? "opacity-100" : "opacity-0"
+      }`}
+    >
       {/* {showSplash && <SplashScreen />} */}
       <header>
         <Navbar />
