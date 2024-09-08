@@ -135,8 +135,8 @@ export default function Home() {
             id="experience"
             className="bg-ocean min-h-screen py-20 px-4 sm:px-6 lg:px-8 antialiased font-mono"
           >
-            <h2 className="text-3xl font-bold text-michael-white mb-10 text-center">
-              My Experience
+            <h2 className="text-michael-white text text-2xl mt-2 antialiased font-mono text-center mb-10">
+              🧑‍💻Experience
             </h2>
             <div className="grid grid-cols-1 gap-8">
               <ExperienceComponent
@@ -145,10 +145,10 @@ export default function Home() {
                 role="Full Stack Software Developer"
                 tenure="June 2022 - Present"
                 accomplishments={[
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. Sed ut purus eget sapien. Sed ut purus eget sapien.",
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. Sed ut purus eget sapien. Sed ut purus eget sapien.",
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. Sed ut purus eget sapien. Sed ut purus eget sapien.",
-                  "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget sapien. Sed ut purus eget sapien. Sed ut purus eget sapien.",
+                  "Mentored new hires on company coding best practices, tools, and development standards",
+                  "Implemented RESTful API endpoints to retrieve batch jobs and statuses with partial response to improve API performance and reliability",
+                  "Developed and styled Angular UI components for UKG's daily schedule planner, which is used by retail and healthcare managers to quickly view and edit employee schedules for the day",
+                  "Drove down customer-reported defects by identifying root causes and implementing timely fixes",
                 ]}
                 skills={[
                   "Java",
@@ -166,8 +166,8 @@ export default function Home() {
             id="projects"
             className="bg-ocean min-h-screen py-20 px-4 sm:px-6 lg:px-8 antialiased font-mono"
           >
-            <h2 className="text-3xl font-bold text-michael-white mb-10 text-center">
-              Projects
+            <h2 className="text-michael-white text text-2xl mt-2 antialiased font-mono text-center mb-10">
+              🛠️Projects
             </h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               <ProjectComponent
